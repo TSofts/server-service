@@ -19,6 +19,11 @@
 			<groupId>com.cars.application</groupId>
 			<artifactId>server-interface</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+		</dependency>
 		<!-- MyBatis -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
