@@ -19,11 +19,6 @@
 			<groupId>com.cars.application</groupId>
 			<artifactId>server-interface</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis</artifactId>
-		</dependency>
 		<!-- MyBatis -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
@@ -34,10 +29,6 @@
 			<artifactId>mybatis-spring</artifactId>
 		</dependency>
 		<!-- posrgres -->
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-		</dependency>
 		<!--spring核心包 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
