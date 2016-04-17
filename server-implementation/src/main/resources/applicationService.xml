@@ -21,6 +21,8 @@
         <!--serviceBeans：暴露的WebService服务类-->
         <jaxrs:serviceBeans>
             <ref bean="checkService"/>
+            <ref bean="accountServiceImpl"/>
+            <ref bean="operatorServiceImpl"/>
         </jaxrs:serviceBeans>
             
         <!--支持的协议-->

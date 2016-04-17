@@ -1,0 +1,40 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-lazy-init="false">
+
+    <bean id="carSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="carDataSource" />
+        <property name="mapperLocations">
+            <list>
+                <value>
+                    classpath*:db/*.xml
+                </value>
+            </list>
+        </property>
+    </bean>
+
+
+    <bean id="carDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+
+        <property name="driverClassName" value="org.postgresql.Driver" />
+
+        <property name="url" value="jdbc:postgresql://localhost:5433/cars" />
+
+        <property name="username" value="jetty" />
+
+        <property name="password" value="jetty" />
+
+    </bean>
+
+    <bean id="accountDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="mapperInterface" value="com.cars.application.account.dao.AccountDao"/>
+        <property name="sqlSessionFactory" ref="carSqlSessionFactory"/>
+    </bean>
+
+    <bean id="operatorDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="mapperInterface" value="com.cars.application.operator.dao.OperatorDao"/>
+        <property name="sqlSessionFactory" ref="carSqlSessionFactory"/>
+    </bean>
+</beans>

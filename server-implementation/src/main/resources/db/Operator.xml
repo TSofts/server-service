@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cars.application.operator.dao.OperatorDao">
+    <resultMap id="OperatorMap" type="com.cars.application.model.operator.OperatorModel">
+        <id property="id" column="id" />
+        <result property="skills" column="emails" jdbcType="ARRAY"
+                javaType="java.sql.Array" typeHandler="com.otms.datacenter.util.mybatis.handler.StringArrayTypeHandler" />
+        <result property="filter" column="filter" />
+        <result property="reportInput" column="reportInput" typeHandler="com.otms.datacenter.util.mybatis.handler.ReportInputJsonTypeHandler"/>
+    </resultMap>
+	<select id="getOperators" resultType="com.cars.application.model.operator.OperatorModel">
+        SELECT id, skills, car_type, rating FROM t_operator_info o
+    </select>
+
+</mapper>

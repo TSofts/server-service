@@ -9,13 +9,13 @@ import com.cars.application.model.ResponseModel;
 import com.cars.application.model.operator.OperatorModel;
 import com.cars.application.model.operator.OperatorParameter;
 
-@Path("/owner")
+@Path("/operators")
 @Produces(MediaType.APPLICATION_JSON)
 public interface IOperatorService {
 	
 
 	@POST
-	@Path("/operators")
+	@Path("/all")
 	ResponseModel<OperatorModel> getOperatorList(OperatorParameter operatorParameter);
 	
 	@POST

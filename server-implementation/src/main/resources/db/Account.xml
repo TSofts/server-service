@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cars.application.account.dao.AccountDao">
+	<select id="getAccounts" resultType="com.cars.application.model.account.AccountModel">
+        SELECT id, name, email FROM t_account_info o
+    </select>
+
+</mapper>
