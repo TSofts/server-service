@@ -5,13 +5,23 @@
 <mapper namespace="com.cars.application.operator.dao.OperatorDao">
     <resultMap id="OperatorMap" type="com.cars.application.model.operator.OperatorModel">
         <id property="id" column="id" />
-        <result property="skills" column="emails" jdbcType="ARRAY"
-                javaType="java.sql.Array" typeHandler="com.otms.datacenter.util.mybatis.handler.StringArrayTypeHandler" />
-        <result property="filter" column="filter" />
-        <result property="reportInput" column="reportInput" typeHandler="com.otms.datacenter.util.mybatis.handler.ReportInputJsonTypeHandler"/>
+        <result property="skills" column="skills" jdbcType="ARRAY"
+                javaType="java.sql.Array" typeHandler="com.cars.util.mybatis.handler.StringArrayTypeHandler" />
+        <result property="car_type" column="car_type" jdbcType="ARRAY"
+                javaType="java.sql.Array" typeHandler="com.cars.util.mybatis.handler.StringArrayTypeHandler" />
+        <result property="rating" column="rating" />
     </resultMap>
-	<select id="getOperators" resultType="com.cars.application.model.operator.OperatorModel">
-        SELECT id, skills, car_type, rating FROM t_operator_info o
+	<select id="getOperators" resultMap="OperatorMap">
+        SELECT id, skills, car_type,show,rating FROM t_operator_info o
     </select>
+
+    <insert id="postOperator" parameterType="com.cars.application.model.operator.OperatorModel">
+        INSERT INTO t_operator_info (name,skills,car_type,show,rating) VALUES (
+            #{name, jdbcType=VARCHAR},
+            #{skills, jdbcType=ARRAY, typeHandler=com.cars.util.mybatis.handler.StringArrayTypeHandler},
+            #{car, jdbcType=ARRAY, typeHandler=com.cars.util.mybatis.handler.StringArrayTypeHandler},
+            #{show, jdbcType=VARCHAR},
+            #{rating, jdbcType=INTEGER})
+    </insert>
 
 </mapper>

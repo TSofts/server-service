@@ -1,0 +1,365 @@
+html,body {
+    overflow-x: hidden;
+    height:100%;
+    width:100%;
+    background-color: #f2f2f2;
+}
+
+#content {
+    width: 100%;
+    height:100%;
+    background-image: url("../image/background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#body {
+    margin: 10px auto;
+}
+
+.container-box {
+    height: 300px;
+
+}
+
+.operator {
+
+    background-image: url("../image/operator.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position:relative;
+    height: 400px;
+    width:100%;
+}
+
+.btn-operator {
+    background-image: url("../image/btn-operator.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 50px;
+    height: 25px;
+    position: absolute;
+    top: 210px;
+    left: 345px;
+}
+
+.owner {
+    background-image: url("../image/owner.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position:relative;
+    height: 400px;
+    width:100%;
+}
+
+.btn-owner {
+    background-image: url("../image/btn-owner.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 50px;
+    height: 25px;
+    position: absolute;
+    top: 210px;
+    left: 295px;
+}
+
+.container-body {
+    height: 70%;
+}
+
+#footer {
+    margin-top: 15px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.4);
+    height: 80px;
+}
+
+ul.footer-menu {
+    display: inline-block;
+    margin: 10px auto;
+}
+
+
+ul.footer-menu > li {
+    float: left;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-right: 1px solid #000000;
+}
+
+/******     feed      ********/
+.feed-container {
+    margin: 0 auto;
+    width: 70%;
+    height: auto;
+    min-width: 250px;
+}
+
+.feed-top {
+    width: 100%;
+    height: 85%;
+    position: relative;
+}
+
+.feed-bottom {
+    width: 100%;
+    height: 20%;
+}
+
+.feed-top > button {
+    float: right
+}
+
+.feed {
+    /*TODO: test*/
+    border: 1px solid;
+    width: 100%;
+    height: 150px;
+    margin: 20px 10px;
+    padding: 5px 10px;
+
+}
+
+.userpic {
+    background-color: #9d9d9d;
+    width: 100px;
+    height: 110px;
+}
+
+.feed-element {
+    float: left;
+}
+
+.feed-rate {
+    padding-left: 0px;
+    height: 100%;
+}
+
+.feed-rate > li {
+    margin: 0 5px;
+    font-size: 18px;
+    color: #bbbbbb;
+}
+
+.feed-rate > li.rate {
+
+    color: #ccc421;
+}
+
+.info {
+    margin: 0 5px;
+    height: 100%;
+    width: auto;
+}
+
+.info > dl > dt, .info > dl > dd {
+    font-size: 12px;
+}
+
+.feed-button {
+    border-radius: 0px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.feed-button:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.feed-button:hover, .feed-button:focus, .feed-button.focus {
+    color: #333;
+    text-decoration: none;
+    outline: 0px;
+}
+
+.feed-button:focus, .feed-button:active:focus, .feed-button.active:focus, .feed-button.focus, .feed-button:active.focus, .feed-button.active.focus {
+    outline: 1px auto -webkit-focus-ring-color;
+}
+
+.feed-car-brand {
+    width: 40px;
+    height: 40px;
+}
+
+.feed-title {
+    font-size: 18px;
+
+}
+
+.description {
+    margin-top: 5px;
+}
+
+.description > label {
+    font-size: 12px;
+    color: #919191;
+    font-weight: normal;
+}
+
+/*************************/
+
+/******* element *********/
+.element-container {
+    display: inline-block;
+}
+
+.element {
+    border: 1px solid;
+    width: 250px;
+    height: 180px;
+    margin: 0 10px;
+}
+
+.element-left {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.element-pic {
+    width: 100%;
+    height: 100%;
+}
+
+.element-right {
+    width: 50%;
+    height: 100%;
+    float: right;
+    position: relative;
+}
+
+.element-rate {
+    padding-left: 0;
+    margin-top: 5px;
+}
+
+.element-button {
+    width: 95%;
+    border-radius: 0;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    position: absolute;
+    bottom: 5px;
+}
+
+.elemen-button:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.elemen-button:hover, .elemen-button:focus, .elemen-button.focus {
+    color: #333;
+    text-decoration: none;
+    outline: 0;
+}
+
+.elemen-button:focus, .elemen-button:active:focus, .elemen-button.active:focus, .elemen-button.focus, .elemen-button:active.focus, .elemen-button.active.focus {
+    outline: 1px auto -webkit-focus-ring-color;
+}
+
+ul.element-rate > li {
+    margin: 0 2px;
+}
+
+ul.cross > li {
+    float: left;
+}
+
+/*************************/
+
+/*******header************/
+.header-pic {
+    width: 70px;
+}
+
+.header-type {
+    width: 110px;
+}
+
+.header-type > .form-group {
+    margin-bottom: 0;
+}
+
+.header-loginform {
+    margin: 0 10px;
+
+}
+
+.header-loginform > button {
+    width: 100%;
+}
+
+.header-loginform > a {
+    font-size: 12px;
+}
+
+.header-menu {
+    padding: 0;
+}
+
+.header-menu > li.menu-ele {
+    padding: 2px 0;
+    text-align: center;
+}
+
+li.menu-ele:hover {
+    background-color: #dddddd;
+    cursor: pointer;
+}
+
+/*************************/
+
+/*********Footer***********/
+.container-foot > p {
+    margin-left: 70px;
+
+}
+
+.footer-menu {
+    margin-left: 30px;
+}
+
+.footer-menu > li {
+    float: left;
+    border-right: solid 1px;
+
+}
+
+.footer-menu > li:last-child {
+    border-right: none;
+}
+
+/**************************/
+/********User Center*******/
+.user-menu {
+    float: left;
+}
+.account {
+    margin: 10px auto;
+    width: 70%;
+    background-color: #ddd;
+    padding: 10px;
+}
+.account-title {
+
+    height: 100px;
+
+
+
+}
+
+.account-title>span.username{
+    font-size: x-large;
+}
+
+/**************************/

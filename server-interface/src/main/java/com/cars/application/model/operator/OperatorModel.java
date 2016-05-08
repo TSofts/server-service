@@ -4,11 +4,49 @@ import java.util.List;
 
 public class OperatorModel {
 
+	private String name;
+
+	private Long id;
+
 	private List<String> skills;
 
-	private List<Integer> cat_type;
-
 	private Long rating;
+
+	private List<String> car;
+
+	private String show;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getShow() {
+		return show;
+	}
+
+	public void setShow(String show) {
+		this.show = show;
+	}
+
+	public List<String> getCar() {
+		return car;
+	}
+
+	public void setCar(List<String> car) {
+		this.car = car;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public List<String> getSkills() {
 		return skills;
@@ -18,13 +56,6 @@ public class OperatorModel {
 		this.skills = skills;
 	}
 
-	public List<Integer> getCat_type() {
-		return cat_type;
-	}
-
-	public void setCat_type(List<Integer> cat_type) {
-		this.cat_type = cat_type;
-	}
 
 	public Long getRating() {
 		return rating;

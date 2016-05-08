@@ -1,10 +1,20 @@
 package com.cars.application.model;
 
-public class ParameterModel {
+public class ParameterModel<T> {
 
-	int page;
-	
-	int count;
+	private int page;
+
+	private int count;
+
+	private T params;
+
+	public T getParams() {
+		return params;
+	}
+
+	public void setParams(T params) {
+		this.params = params;
+	}
 
 	public int getPage() {
 		return page;

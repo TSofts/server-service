@@ -1,30 +1,35 @@
 package com.cars.application.model;
 
-import java.util.List;
 
 public class ResponseModel<T> {
 	
-	private List<T> data;
+	private T data;
 	
 	private int total;
 	
-	private String status;
+	private int status;
 	
 	private String errorMsg;
 
-	public List<T> getData() {
+	public ResponseModel(int status) {
+		this.status = status;
+	}
+
+	public T getData() {
 		return data;
 	}
 
-	public void setData(List<T> data) {
+	public void setData(T data) {
 		this.data = data;
 	}
 
-	public String getStatus() {
+	public int getStatus() {
 		return status;
 	}
-	
-	
+
+	public void setStatus(int status) {
+		this.status = status;
+	}
 
 	public int getTotal() {
 		return total;
@@ -32,10 +37,6 @@ public class ResponseModel<T> {
 
 	public void setTotal(int total) {
 		this.total = total;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
 	}
 
 	public String getErrorMsg() {
